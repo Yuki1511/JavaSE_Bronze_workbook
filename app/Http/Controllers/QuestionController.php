@@ -7,6 +7,12 @@ use App\Models\Question;
 
 class QuestionController extends Controller
 {
-    $questions = Questions::all();
-    return view('index',compact('question'));
+    public function index()
+    {
+
+        $questions = Question::all();
+        return view('question.index',compact('questions'));
+        // viewに入っているquestionフォルダのindex.blade.phpを呼び出す
+        
+    }
 }
