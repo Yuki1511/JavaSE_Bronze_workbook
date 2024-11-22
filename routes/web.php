@@ -21,8 +21,8 @@ use App\Http\Controllers\AnswerController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('index', [QuestionController::class, 'questions']);
+// /questionにアクセスされたらQuestionControllerのindexメソッドを呼び出せ
+Route::get('/question', [QuestionController::class, 'index']);
 
 
 Route::get('/dashboard', function () {
