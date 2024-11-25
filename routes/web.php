@@ -24,6 +24,8 @@ Route::get('/', function () {
 // /questionにアクセスされたらQuestionControllerのindexメソッドを呼び出せ
 Route::get('/question', [QuestionController::class, 'index']);
 
+Route::get('/answer', [AnswerController::class, 'index']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
