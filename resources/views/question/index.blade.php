@@ -14,6 +14,7 @@
     <table>
         <thead>
             <tr>
+                <th>問題番号</th>
                 <th>問題文</th>
                 <th>章</th>
             </tr>
