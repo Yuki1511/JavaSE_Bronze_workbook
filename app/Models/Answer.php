@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'answer_num';
+
+    public function question() 
+    {
+    return $this->belongsTo(Question::class);
+}
 }

@@ -9,4 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'question_num';
+
+    public function answer()
+    {
+    return $this->hasMany(Answer::class);
+    }
 }
