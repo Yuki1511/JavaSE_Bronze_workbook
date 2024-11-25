@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('answers', function (Blueprint $table) {
-            $table->id();
-            $table->integer('question_id');
-            $table->string('select',25);
+            $table->id('answer_num');
+            $table->integer('question_num');
+            $table->string('choice',25);
             $table->string('sentence');
             $table->boolean('answer');
             $table->timestamps();
