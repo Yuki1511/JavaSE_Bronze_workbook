@@ -4,8 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
-
-
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +20,14 @@ use App\Http\Controllers\AnswerController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 // /questionにアクセスされたらQuestionControllerのindexメソッドを呼び出せ
-Route::get('/question', [QuestionController::class, 'index']);
-Route::get('/question', ['name' => 'yuki']);
+Route::get('/question/index', [QuestionController::class, 'index']);
+
+Route::get('/question/index/{post}', [QuestionController::class, 'show']);
+
+Route::get('/question/questions_list', [QuestionController::class, 'questions_list']);
+
 
 Route::get('/answer', [AnswerController::class, 'index']);
 

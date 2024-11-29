@@ -26,42 +26,12 @@
         </div>
         <h4>選択肢</h4>
         <ul>
-            <li>選択A</li>
-            <li>選択B</li>
-            <li>選択C</li>
-            <li>選択D</li>
-            <li>選択E</li>
-            <li>選択F</li>
+            @foreach( $questions as $choice)
+            <li>{{$choice->answers}}</li>
         </ul>
         <h4>答え</h4>
         <h4>解説</h4>
-        <button id="next-button">次の問題</button>
-        <table>
-            <thead>
-                <tr>
-                    <th>問題番号</th>
-                    <th>問題文</th>
-                    <th>章</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach ($questions as $question)
-                    <tr>
-                        <div>{{ $question->question }}</div>
-                        <td>{{ $question->question_num }}</td>
-                        <td>{{ $question->category_num }}</td>
-                        
-                        {{-- {{dd($question)}} --}}
-                        {{-- @foreachは拡張for文 --}}
-                        @foreach ($question->answers as $answer)
-                        <input type="radio" name="answer" value="{{ $answer->choice }}">
-                        {{-- <td>{{ $answer->sentence }}</td> --}}
-                        @endforeach
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<button>次へ</button>
     </main>
 </body>
 
