@@ -114,5 +114,131 @@ class AnswersTableSeeder extends Seeder
             'answer' => '1',
         ];
         DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '4',
+            'choice' => 'A',
+            'sentence' => 'コンパイラによって機械語にコンパイルされる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '4',
+            'choice' => 'B',
+            'sentence' => 'コンパイラによって中間コードにコンパイルされる',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '4',
+            'choice' => 'C',
+            'sentence' => '実行可能ファイルを作成する',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '4',
+            'choice' => 'D',
+            'sentence' => 'JVMにクラスファイルを読み込ませる',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '5',
+            'choice' => 'A',
+            'sentence' => 'プラットフォームに依存したネイティブコードが記述されている',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '5',
+            'choice' => 'B',
+            'sentence' => 'プラットフォームに依存しないネイティブコードが記述されている',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '5',
+            'choice' => 'C',
+            'sentence' => 'JVMだけが理解できるコードが記述されている',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '5',
+            'choice' => 'D',
+            'sentence' => '人間が理解できるコードが記述されている',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '6',
+            'choice' => 'A',
+            'sentence' => '自動的にメモリを解放する',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '6',
+            'choice' => 'B',
+            'sentence' => 'メモリを任意のタイミングで解放できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '6',
+            'choice' => 'C',
+            'sentence' => 'ポインタを使ってメモリを自由に操作できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '6',
+            'choice' => 'D',
+            'sentence' => 'メモリの効率的な利用を自動化する',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'A',
+            'sentence' => 'publicであること',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'B',
+            'sentence' => 'staticであること',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'C',
+            'sentence' => '１つのソースファイルに複数記述できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'D',
+            'sentence' => '戻り値型はintであること',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'E',
+            'sentence' => '引数はString配列型もしくはString型の可変長引数であること',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '7',
+            'choice' => 'F',
+            'sentence' => '戻り値として0、もしくは1を戻すこと',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
     }
 }
