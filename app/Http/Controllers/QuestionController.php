@@ -12,7 +12,7 @@ class QuestionController extends Controller
     {
         $questions = Question::all();
 
-        return view('question/index',compact('questions'));
+        return view('question.index',compact('questions'));
         // viewに入っているquestionフォルダのindex.blade.phpを呼び出す
         
     }
@@ -20,11 +20,11 @@ class QuestionController extends Controller
     public function questions_list(){
         $questions = Question::all();
 
-        return view('question/questions_list', compact('questions'));
+        return view('question.questions_list', compact('questions'));
     }
 
-    public function show(Post $post){
-        
-        return view('question/index', compact('post'));
+    public function show($question_id){
+        $question = Question::find($question_id);
+        return view('question.index', compact('question'));
     }
 }
