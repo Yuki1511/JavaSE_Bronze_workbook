@@ -23,8 +23,8 @@ Route::get('/', function () {
 
 // /questionにアクセスされたらQuestionControllerのindexメソッドを呼び出せ
 Route::get('/question/index', [QuestionController::class, 'index']);
-
-Route::get('/question/index/{post}', [QuestionController::class, 'show']);
+// 個別表示ルート
+Route::get('/question/index/{question_id}', [QuestionController::class, 'show']);
 
 Route::get('/question/questions_list', [QuestionController::class, 'questions_list']);
 
