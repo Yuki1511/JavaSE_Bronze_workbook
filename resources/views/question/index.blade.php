@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <title>Quenstion</title>
 </head>
 
@@ -13,7 +14,7 @@
         <h2>Java SE11 Bronze 資格対策</h2>
         <p>試験日</p>
 
-        <ul>
+        <ul style="list-style: none">
             <li>学習開始</li>
             <li>章選択</li>
             <li>ログイン</li>
@@ -22,17 +23,23 @@
     <main>
         <h3>問題</h3>
         <div class="question-text">
-            <p>ここに問題文が入る</p>
+            <p>{{ $question->question }}</p>
         </div>
         <h4>選択肢</h4>
-        <ul>
-            @foreach( $questions as $choice)
-            <li>{{$choice->answers}}</li>
-        </ul>
+        @foreach ($question->answers as $answer)
+            <ul style="list-style: none">
+                <label>
+                <button type="submit">{{ $answer->choice }}</button>&ensp;{{ $answer->sentence }}
+                </label>
+            </ul>
+        @endforeach
         <h4>答え</h4>
         <h4>解説</h4>
-<button>次へ</button>
+        <button>次へ</button>
     </main>
 </body>
+<style>
+
+</style>
 
 </html>
