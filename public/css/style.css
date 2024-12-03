@@ -1,0 +1,10 @@
+
+body{
+    font-size: large;
+    margin: 0;
+}
+
+header{
+    background-image: url("../images/back_paper.jpg");
+    background-repeat: repeat-x;
+}
