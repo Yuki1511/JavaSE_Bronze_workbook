@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <title>Quenstion</title>
 </head>
 
@@ -29,11 +29,21 @@
         @foreach ($question->answers as $answer)
             <ul style="list-style: none">
                 <label>
-                <button type="submit">{{ $answer->choice }}</button>&ensp;{{ $answer->sentence }}
+                    <button type="submit"
+                        name="choice_answer">{{ $answer->choice }}</button>&ensp;{{ $answer->sentence }}
                 </label>
             </ul>
+            <h4>答え</h4>
+            {{-- 選択肢から答えを選択すると表示 --}}
+            <script>
+                const choice_answer = document.querySelector('choice_answer');
+
+                const answer = 
+                {{$answer->answer('value')}};
+                    choice_answer.addEventListener('click', answer);
+            </script>
         @endforeach
-        <h4>答え</h4>
+
         <h4>解説</h4>
         <button>次へ</button>
     </main>
