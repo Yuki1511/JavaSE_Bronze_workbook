@@ -8,3 +8,21 @@ header{
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
 }
+
+.main_nav{
+    list-style: none;
+    display: flex;
+    justify-self: center;
+}
+
+.main_nav li {
+    margin: 0 1rem;
+    font-size: 24px;
+}
+
+.test_day {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
