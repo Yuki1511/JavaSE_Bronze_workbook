@@ -12,13 +12,14 @@
 <body>
     <header>
         <h2>Java SE11 Bronze 資格対策</h2>
-        <p>試験日</p>
-
-        <ul style="list-style: none">
-            <li>学習開始</li>
-            <li>章選択</li>
-            <li>ログイン</li>
+        <ul class="main_nav">
+            <a href="#"><li>学習開始</li></a>
+            <a href="#"><li>章選択</li></a>
+            <a href="#"><li>ログイン</li></a>
         </ul>
+        <div class="test_day">
+            <p >試験日</p>
+        </div>
     </header>
     <main>
         <h3>問題</h3>
@@ -31,7 +32,8 @@
                 <li>
                     <label>
                         <input type="checkbox"
-                            class={{ 'answer_' . $answer->answer }}>{{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
+                            class={{ 'answer_' . $answer->answer }}>
+                            {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
                     </label>
                 </li>
             @endforeach
@@ -40,6 +42,12 @@
         {{--選択した組み合わせが正しいか確認 --}}
 
         <script>
+if (answers === 1)
+
+
+
+
+
             const answers = document.querySelectorAll('.answer_1');   //上のlabelタグで設定したクラスでtrueのみ抽出
             // 選択肢をクリックし、正解を表示させるイベント
             answers.forEach(answer => {
@@ -52,6 +60,7 @@
         <h4>解説</h4>
         <button>次へ</button>
     </main>
+
 </body>
 <style>
 
