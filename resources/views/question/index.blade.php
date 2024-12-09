@@ -26,23 +26,28 @@
             <p>{{ $question->question }}</p>
         </div>
         <h4>選択肢</h4>
-        @foreach ($question->answers as $answer)
-            <ul style="list-style: none">
-                <label>
-                    <button type="submit"
-                        name="choice_answer">{{ $answer->choice }}</button>&ensp;{{ $answer->sentence }}
-                </label>
-            </ul>
-            <h4>答え</h4>
-            {{-- 選択肢から答えを選択すると表示 --}}
-            <script>
-                const choice_answer = document.querySelector('choice_answer');
+        <ul style="list-style: none">
+            @foreach ($question->answers as $answer)
+                <li>
+                    <label>
+                        <input type="checkbox"
+                            class={{ 'answer_' . $answer->answer }}>{{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
+                    </label>
+                </li>
+            @endforeach
+        </ul>
+        <button >正解を確認</button>
+        {{--選択した組み合わせが正しいか確認 --}}
 
-                const answer = 
-                {{$answer->answer('value')}};
-                    choice_answer.addEventListener('click', answer);
-            </script>
-        @endforeach
+        <script>
+            const answers = document.querySelectorAll('.answer_1');   //上のlabelタグで設定したクラスでtrueのみ抽出
+            // 選択肢をクリックし、正解を表示させるイベント
+            answers.forEach(answer => {
+                answer.addEventListener('click', () => {
+                    console.log('正解')
+                });
+            });
+        </script>
 
         <h4>解説</h4>
         <button>次へ</button>
