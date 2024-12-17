@@ -44,43 +44,24 @@
             @endforeach
         </ul>
         <button class="answer_btn">正解を確認</button>
-        {{-- 選択した組み合わせが正しいか確認 --}}
-
-
 
         <h4>解説</h4>
-        <button class="nextQestion_btn">次へ</button>
+        <div class="{{ 'page_' . $question->question_num }} ">
+            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
+                <button class="backQestion_btn">前の問題</button></a>
+            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
+                <button class="nextQestion_btn">次の問題</button></a>
+        </div>
     </main>
-    
+
     <script>
-        const Button = document.querySelector('.answer_btn'); //-------正誤判定ボタン取得
-        const answers = document.querySelectorAll('.answer_btn_all'); //----------全選択肢取得
-        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解選択肢取得
-        const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
-        const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
+        // page1の時は「前の問題」ボタンを非表示する
+       const firstPage = document.querySelecter('.page_1');
 
-        let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
-
-        let correctCount = 0; //-------正答数カウント
-
-        console.log(Button);
+       
+        // 選択肢の正否
 
 
-        Button.onclick = () => {
-            correctCount = 0;
-
-            answers.forEach((answer, index) => {
-                if (checkboxes[index].checked && answer.classList.contains('answer_1')) {
-                    correctCount++;
-                }
-            });
-
-            if (correctCount === correctAnswers.length) {
-                rightEffect.style.display = 'block';
-            } else {
-                wrongEffect.style.display = 'block';
-            }
-        };
     </script>
 
 
