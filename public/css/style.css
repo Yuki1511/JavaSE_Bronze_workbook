@@ -1,7 +1,7 @@
 
 body{
     font-size: large;
-    margin: 0;
+    margin: 0 1rem;
 }
 
 header{
@@ -25,4 +25,11 @@ header{
     margin-right: 1rem;
 }
 
+.backQestion_btn ,.nextQestion_btn{
+    transition: transform 0.2s ease-in-out;
+}
+
+.backQestion_btn:hover ,.nextQestion_btn:hover{
+    transform: scale(1.1);
+}
 
