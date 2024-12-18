@@ -56,7 +56,12 @@
 
     <script>
         // page1の時は「前の問題」ボタンを非表示する
-       const firstPage = document.querySelecter('.page_1');
+       const currentPage = document.querySelector('.page_1');
+       const backButton = document.querySelector('.backQuestion_btn');
+
+       if(currentPage === 'page_1'){
+        backButton.style.display = 'none';
+       }
 
        
         // 選択肢の正否
