@@ -55,18 +55,31 @@
     </main>
 
     <script>
-        // page1の時は「前の問題」ボタンを非表示する
-       const currentPage = document.querySelector('.page_1');
-       const backButton = document.querySelector('.backQuestion_btn');
+        const Button = document.querySelector('.answer_btn'); //-------正誤判定ボタン取得
+        const answers = document.querySelectorAll('.answer_btn_all'); //----------全選択肢取得
+        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解選択肢取得
+        const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
+        const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
 
-       if(currentPage === 'page_1'){
-        backButton.style.display = 'none';
-       }
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
-       
-        // 選択肢の正否
+        let correctCount = 0; //-------正答数カウント
 
+        Button.onclick = () => {
+            correctCount = 0;
 
+            answers.forEach((answer, index) => {
+                if (checkboxes[index].checked && answer.classList.contains('answer_1')) {
+                    correctCount++;
+                }
+            });
+
+            if (correctCount === answer.length) { //-------もし正答数と正解選択肢の数が一緒なら
+                alert('正解！') //--------正解
+            } else {
+                alert('不正解！！') //--------不正解
+            }
+        };
     </script>
 
 
