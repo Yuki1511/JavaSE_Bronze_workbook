@@ -60,8 +60,8 @@ header {
     transform-origin: left;
     width: 2em;
     height: .5em;
-    background-color: #000;
-    clip-path: polygon(100% 100%, 0% 100%, 30% 60%, 30% 40%, 100% 40%);
+    background-color: #2142c4;
+    clip-path: polygon(100% 100%, 0% 100%, 70% 90%, 70% 40%, 100% 40%);
     content: '';
 }
 
