@@ -35,7 +35,7 @@
         <h4>選択肢</h4>
         <ul style="list-style: none">
             @foreach ($question->answers as $answer)
-                <li class="answer_btn_all">
+                <li class="choice_btn_all">
                     <label>
                         <input type="checkbox" class="{{ 'answer_' . $answer->answer }}">
                         {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
@@ -43,7 +43,7 @@
                 </li>
             @endforeach
         </ul>
-        <button class="answer_btn">正解を確認</button>
+        <button class="check_btn">正解を確認</button>
 
         <h4>解説</h4>
         <div class="{{ 'page_' . $question->question_num }} ">
@@ -55,26 +55,27 @@
     </main>
 
     <script>
-        const Button = document.querySelector('.answer_btn'); //-------正誤判定ボタン取得
-        const answers = document.querySelectorAll('.answer_btn_all'); //----------全選択肢取得
+        const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン取得
+        const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢取得
         const correctAnswers = document.querySelectorAll('.answer_1') //-------正解選択肢取得
-        const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
-        const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
+        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
+        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
         let correctCount = 0; //-------正答数カウント
 
-        Button.onclick = () => {
+        ckeckButton.onclick = () => {
             correctCount = 0;
 
-            answers.forEach((answer, index) => {
-                if (checkboxes[index].checked && answer.classList.contains('answer_1')) {
+            allChoices.forEach((choice) => {
+                if (choice.querySelector('input').checked && choice.classList.contains('answer_1')) {
                     correctCount++;
                 }
             });
+            console.log(correctCount);
 
-            if (correctCount === answer.length) { //-------もし正答数と正解選択肢の数が一緒なら
+            if (correctCount === correctAnswers.length) {
                 alert('正解！') //--------正解
             } else {
                 alert('不正解！！') //--------不正解
