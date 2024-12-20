@@ -55,25 +55,27 @@
     </main>
 
     <script>
-        const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン取得
-        const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢取得
-        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解選択肢取得
-        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
-        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
+        const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン
+        const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢
+        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解の選択肢
+        const wrongAnswers = document.querySelectorAll('.answer_0') //--------不正解の選択肢
+        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト 
+        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
         let correctCount = 0; //-------正答数カウント
 
         ckeckButton.onclick = () => {
-            correctCount = 0;
 
-            allChoices.forEach((choice) => {
-                if (choice.querySelector('input').checked && choice.classList.contains('answer_1')) {
+            for (let i = 0; i < allChoices.rength; i++) {
+                if ( === correctAnswers){
                     correctCount++;
+                } else {
+                    correctCount--;
                 }
-            });
-            console.log(correctCount);
+            }
+
 
             if (correctCount === correctAnswers.length) {
                 alert('正解！') //--------正解
