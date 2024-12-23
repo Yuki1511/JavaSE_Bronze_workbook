@@ -33,11 +33,11 @@
             <p>{{ $question->question }}</p>
         </div>
         <h4>選択肢</h4>
-        <ul style="list-style: none">
+        <ul>
             @foreach ($question->answers as $answer)
-                <li class="choice_btn_all">
+                <li>
                     <label>
-                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }}">
+                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
                         {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
                     </label>
                 </li>
@@ -68,12 +68,11 @@
 
         ckeckButton.onclick = () => {
 
-            for (let i = 0; i < allChoices.rength; i++) {
-                if ( === correctAnswers){
+            for (let i = 0; i < allChoices.length; i++) {
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0]==='answer_1') {
                     correctCount++;
-                } else {
-                    correctCount--;
-                }
+                } 
+                console.log(correctCount)
             }
 
 
