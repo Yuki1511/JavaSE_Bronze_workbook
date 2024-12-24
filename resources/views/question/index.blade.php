@@ -46,12 +46,13 @@
         <button class="check_btn">正解を確認</button>
 
         <h4>解説</h4>
-        <div class="{{ 'page_' . $question->question_num }} ">
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
-                <button class="backQestion_btn">前の問題</button></a>
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
-                <button class="nextQestion_btn">次の問題</button></a>
-        </div>
+        <div></div>
+            <div class="{{ 'page_' . $question->question_num }}  page_btn">
+                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
+                    <button class="backQestion_btn">前の問題</button></a>
+                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
+                    <button class="nextQestion_btn">次の問題</button></a>
+            </div>
     </main>
 
     <script>
@@ -69,9 +70,10 @@
         ckeckButton.onclick = () => {
 
             for (let i = 0; i < allChoices.length; i++) {
-                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0]==='answer_1') {
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ===
+                    'answer_1') {
                     correctCount++;
-                } 
+                }
                 console.log(correctCount)
             }
 
