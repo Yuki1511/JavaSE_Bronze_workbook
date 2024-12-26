@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id('category_num');
-            $table->string('Question_category');
+            $table->integer('Question_category');
         });
     }
 
