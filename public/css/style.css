@@ -24,6 +24,25 @@ header {
     margin-right: 1rem;
 }
 
+.check_btn {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        margin: 0 auto;
+        padding: .9em 2em;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #fff;
+        color: black;
+        font-size: 1em;
+}
+
+.page_btn {
+    display: flex;
+    
+}
+
 .backQestion_btn,
 .nextQestion_btn {
     display: flex;
@@ -31,7 +50,7 @@ header {
     align-items: center;
     width: 200px;
     margin: 0 auto;
-    padding: .9em 2em;
+    padding: .5em 2em;
     border: 1px solid black;
     border-radius: 5px;
     background-color: #fff;
@@ -58,4 +77,8 @@ header {
     border-top: 2px solid black;
     border-right: 2px solid black;
     content: '';
+}
+
+ul {
+    list-style-type: none;
 }

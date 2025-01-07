@@ -33,11 +33,11 @@
             <p>{{ $question->question }}</p>
         </div>
         <h4>選択肢</h4>
-        <ul style="list-style: none">
+        <ul>
             @foreach ($question->answers as $answer)
-                <li class="choice_btn_all">
+                <li>
                     <label>
-                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }}">
+                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
                         {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
                     </label>
                 </li>
@@ -46,34 +46,37 @@
         <button class="check_btn">正解を確認</button>
 
         <h4>解説</h4>
-        <div class="{{ 'page_' . $question->question_num }} ">
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
-                <button class="backQestion_btn">前の問題</button></a>
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
-                <button class="nextQestion_btn">次の問題</button></a>
-        </div>
+        <div></div>
+            <div class="{{ 'page_' . $question->question_num }}  page_btn">
+                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
+                    <button class="backQestion_btn">前の問題</button></a>
+                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
+                    <button class="nextQestion_btn">次の問題</button></a>
+            </div>
     </main>
 
     <script>
-        const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン取得
-        const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢取得
-        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解選択肢取得
-        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト取得 
-        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト取得
+        const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン
+        const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢
+        const correctAnswers = document.querySelectorAll('.answer_1') //-------正解の選択肢
+        const wrongAnswers = document.querySelectorAll('.answer_0') //--------不正解の選択肢
+        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト 
+        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
         let correctCount = 0; //-------正答数カウント
 
         ckeckButton.onclick = () => {
-            correctCount = 0;
 
-            allChoices.forEach((choice) => {
-                if (choice.querySelector('input').checked && choice.classList.contains('answer_1')) {
+            for (let i = 0; i < allChoices.length; i++) {
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ===
+                    'answer_1') {
                     correctCount++;
                 }
-            });
-            console.log(correctCount);
+                console.log(correctCount)
+            }
+
 
             if (correctCount === correctAnswers.length) {
                 alert('正解！') //--------正解
