@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 // /questionにアクセスされたらQuestionControllerのindexメソッドを呼び出せ
-Route::get('/question/index', [QuestionController::class, 'index']);
+Route::get('/question/index', [QuestionController::class, 'index']) -> Middleware('auth');
 // 個別表示ルート
 Route::get('/question/index/{question_id}', [QuestionController::class, 'show']);
 
