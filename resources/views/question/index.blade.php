@@ -16,7 +16,10 @@
 
 <body class="font_ja">
     <header>
-        <h2>Java SE11 Bronze 資格対策</h2>
+        <div class="site_top">
+            <h2>Java SE11 Bronze 資格対策</h2>
+            <p>ログイン</p>
+        </div>
         <ul class="main_nav ">
             <a href="#">
                 <li>学習開始</li>
@@ -25,11 +28,9 @@
                 <li>章選択</li>
             </a>
             <a href="#">
-                <li>ログイン</li>
+                <li>試験概要</li>
             </a>
-            <div class="test_day">
-                <p>試験日</p>
-            </div>
+
         </ul>
     </header>
     <main>
