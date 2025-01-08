@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
     <title>Quenstion</title>
 </head>
 
-<body>
+<body class="font_ja">
     <header>
         <h2>Java SE11 Bronze 資格対策</h2>
-        <ul class="main_nav">
+        <ul class="main_nav ">
             <a href="#">
                 <li>学習開始</li>
             </a>
@@ -22,17 +27,17 @@
             <a href="#">
                 <li>ログイン</li>
             </a>
+            <div class="test_day">
+                <p>試験日</p>
+            </div>
         </ul>
-        <div class="test_day">
-            <p>試験日</p>
-        </div>
     </header>
     <main>
-        <h3>問題</h3>
+        <p class="title">問題</p>
         <div class="question-text">
             <p>{{ $question->question }}</p>
         </div>
-        <h4>選択肢</h4>
+        <p class="title">選択肢</p>
         <ul>
             @foreach ($question->answers as $answer)
                 <li>
@@ -43,16 +48,16 @@
                 </li>
             @endforeach
         </ul>
-        <button class="check_btn">正解を確認</button>
+        <button class="check_btn">Check!</button>
 
-        <h4>解説</h4>
+        <p class="title">解説</p>
         <div></div>
-            <div class="{{ 'page_' . $question->question_num }}  page_btn">
-                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
-                    <button class="backQestion_btn">前の問題</button></a>
-                <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
-                    <button class="nextQestion_btn">次の問題</button></a>
-            </div>
+        <div class="{{ 'page_' . $question->question_num }}  page_btn">
+            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
+                <button class="backQestion_btn">Back</button></a>
+            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
+                <button class="nextQestion_btn">Next</button></a>
+        </div>
     </main>
 
     <script>

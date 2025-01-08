@@ -1,11 +1,40 @@
+/* -----カラー変数----- */
+:root {
+    --primary-color: #EAE6E1;
+    --secondary-color: #E4C1B5;
+    --accent-color: #544C40;
+}
+
 body {
     font-size: large;
     margin: 0 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
 
+.font_ja {
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color)
+}
 header {
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
+    background-color: var(--secondary-color);
+}
+
+ul {
+    list-style-type: none;
 }
 
 .main_nav {
@@ -16,7 +45,7 @@ header {
 
 .main_nav li {
     margin: 0 1rem;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .test_day {
@@ -26,21 +55,22 @@ header {
 
 .check_btn {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        margin: 0 auto;
-        padding: .9em 2em;
-        border: 1px solid black;
-        border-radius: 5px;
-        background-color: #fff;
-        color: black;
-        font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 0 auto;
+    padding: .9em 2em;
+    border: 1px solid ;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 1em;
 }
 
 .page_btn {
     display: flex;
-    
+    justify-content:space-between;
+
 }
 
 .backQestion_btn,
@@ -51,10 +81,10 @@ header {
     width: 200px;
     margin: 0 auto;
     padding: .5em 2em;
-    border: 1px solid black;
+    border: 1px solid ;
     border-radius: 5px;
-    background-color: #fff;
-    color: black;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     font-size: 1em;
 }
 
@@ -64,8 +94,8 @@ header {
     width: 5px;
     height: 5px;
     margin-left: 10px;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
+    border-top: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
     content: '';
 }
 
@@ -74,11 +104,8 @@ header {
     width: 5px;
     height: 5px;
     margin-right: 10px;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
+    border-top: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
     content: '';
 }
 
-ul {
-    list-style-type: none;
-}
