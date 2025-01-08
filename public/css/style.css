@@ -1,10 +1,21 @@
-/* -----カラー変数----- */
+/* -----共通----- */
 :root {
     --primary-color: #EAE6E1;
     --secondary-color: #E4C1B5;
     --accent-color: #544C40;
 }
 
+a {
+    text-decoration: none;
+}
+
+.font_ja {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ------レイアウト----- */
 body {
     font-size: large;
     margin: 0 1rem;
@@ -12,29 +23,29 @@ body {
     color: var(--accent-color);
 }
 
-.font_ja {
-    font-family: "Yusei Magic", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .title {
     font-size: x-large;
     font-weight: 100;
 }
 
-a {
-    text-decoration: none;
-    color: var(--accent-color)
-}
-header {
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
     background-color: var(--secondary-color);
 }
 
+main {
+    width: 900px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
 ul {
     list-style-type: none;
+    gap: 2.5rem;
 }
 
 .main_nav {
@@ -51,17 +62,27 @@ ul {
 .site_top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
 }
 
+.question-text,.answers_list {
+    display: block;
+    background-color: var(--secondary-color);
+    padding: .5rem;
+}
+
+.answers_list li {
+    padding: 1.25px;
+}
+
+/* -----ボタン------ */
 .check_btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
-    margin: 0 auto;
-    padding: .9em 2em;
-    border: 1px solid ;
+    margin: 2rem auto;
+    padding: .5em 2em;
+    border: 1px solid;
     border-radius: 5px;
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -70,7 +91,7 @@ ul {
 
 .page_btn {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 
 }
 
@@ -82,7 +103,7 @@ ul {
     width: 200px;
     margin: 0 auto;
     padding: .5em 2em;
-    border: 1px solid ;
+    border: 1px solid;
     border-radius: 5px;
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -109,4 +130,3 @@ ul {
     border-right: 2px solid var(--primary-color);
     content: '';
 }
-

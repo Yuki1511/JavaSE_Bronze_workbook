@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Yusei+Magic&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Shippori+Mincho&display=swap"
         rel="stylesheet">
     <title>Quenstion</title>
 </head>
 
 <body class="font_ja">
-    <header>
+    <header class="wrapper">
         <div class="site_top">
             <h2>Java SE11 Bronze 資格対策</h2>
             <p>ログイン</p>
@@ -34,23 +33,25 @@
         </ul>
     </header>
     <main>
-        <p class="title">問題</p>
-        <div class="question-text">
-            <p>{{ $question->question }}</p>
+        <div class="main-contents">
+            <p class="title">問題</p>
+            <div class="question-text">
+                <p>{{ $question->question }}</p>
+            </div>
+            <p class="title">選択肢</p>
+            <ul class="answers_list">
+                @foreach ($question->answers as $answer)
+                    <li>
+                        <label>
+                            <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
+                            {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
+                        </label>
+                    </li>
+                @endforeach
+            </ul>
         </div>
-        <p class="title">選択肢</p>
-        <ul>
-            @foreach ($question->answers as $answer)
-                <li>
-                    <label>
-                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
-                        {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
-                    </label>
-                </li>
-            @endforeach
-        </ul>
-        <button class="check_btn">Check!</button>
 
+        <button class="check_btn">Check!</button>
         <p class="title">解説</p>
         <div></div>
         <div class="{{ 'page_' . $question->question_num }}  page_btn">
@@ -82,7 +83,6 @@
                 }
                 console.log(correctCount)
             }
-
 
             if (correctCount === correctAnswers.length) {
                 alert('正解！') //--------正解
