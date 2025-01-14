@@ -37,10 +37,18 @@ body {
     background-color: var(--secondary-color);
 }
 
+header li {
+    border: thick double var(--primary-color);
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    padding: .5rem 2rem;
+}
+
 main {
     width: 900px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 ul {
@@ -68,6 +76,7 @@ ul {
     display: block;
     background-color: var(--secondary-color);
     padding: .5rem;
+    border-radius: 5px;
 }
 
 .answers_list li {
