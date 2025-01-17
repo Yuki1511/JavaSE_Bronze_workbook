@@ -7,6 +7,7 @@
 
 a {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 .font_ja {
@@ -15,10 +16,11 @@ a {
     font-style: normal;
 }
 
-/* ------レイアウト----- */
+/* ------ベースレイアウト----- */
 body {
     font-size: large;
-    margin: 0 1rem;
+    margin: 0;
+    padding: 0;
     background-color: var(--primary-color);
     color: var(--accent-color);
 }
@@ -29,31 +31,40 @@ body {
 }
 
 .wrapper {
-    max-width: 1120px;
+    max-width: 900px;
     margin: auto;
     padding: 0 1.5rem;
+}
+/* -----ヘッダー----- */
+header {
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
-    background-color: var(--secondary-color);
+    width: 100%;
 }
 
 header li {
     border: thick double var(--primary-color);
     background-color: var(--accent-color);
     border-radius: 5px;
-    color: var(--primary-color);
     padding: .5rem 2rem;
-}
-
-main {
-    width: 900px;
-    margin: auto;
-    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 ul {
     list-style-type: none;
     gap: 2.5rem;
+}
+
+.login_btn {
+    margin: 2rem 0;
+    font-size: larger;
+    display: block;
+    background-color: var(--accent-color);
+}
+/* -----メイン----- */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 .main_nav {
@@ -72,10 +83,12 @@ ul {
     justify-content: space-between;
 }
 
-.question-text,.answers_list {
+.question-text,
+.answers_list {
     display: block;
     background-color: var(--secondary-color);
-    padding: .5rem;
+    padding: 0rem;
+    margin: 1rem;
     border-radius: 5px;
 }
 
@@ -84,41 +97,32 @@ ul {
 }
 
 /* -----ボタン------ */
-.check_btn {
+button {
+    border: thick double var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
-    margin: 2rem auto;
-    padding: .5em 2em;
-    border: 1px solid;
     border-radius: 5px;
     background-color: var(--accent-color);
     color: var(--primary-color);
     font-size: 1em;
+    padding: .5em 2em;
+}
+
+.check_btn {
+    margin: 2rem auto;
 }
 
 .page_btn {
     display: flex;
     justify-content: space-between;
-
 }
 
 .backQestion_btn,
 .nextQestion_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
     margin: 0 auto;
-    padding: .5em 2em;
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    font-size: 1em;
 }
-
 
 .nextQestion_btn::after {
     transform: rotate(45deg);
