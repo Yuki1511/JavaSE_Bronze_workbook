@@ -1,67 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Shippori+Mincho&display=swap"
-        rel="stylesheet">
-    <title>Quenstion</title>
-</head>
-
-<body class="font_ja">
-    <header class="wrapper">
-        <div class="site_top">
-            <h2>Java SE11 Bronze 資格対策</h2>
-            <p>ログイン</p>
+<x-app-layout>
+    <div class="main-contents">
+        <h4 class="title">問題</h4>
+        <div class="question-text">
+            <p>{{ $question->question }}</p>
         </div>
-        <ul class="main_nav ">
-            <a href="#">
-                <li>学習開始</li>
-            </a>
-            <a href="#">
-                <li>章選択</li>
-            </a>
-            <a href="#">
-                <li>試験概要</li>
-            </a>
-
+        <h4 class="title">選択肢</h4>
+        <ul class="answers_list">
+            @foreach ($question->answers as $answer)
+                <li>
+                    <label>
+                        <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
+                        {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
+                    </label>
+                </li>
+            @endforeach
         </ul>
-    </header>
-    <main>
-        <div class="main-contents">
-            <p class="title">問題</p>
-            <div class="question-text">
-                <p>{{ $question->question }}</p>
-            </div>
-            <p class="title">選択肢</p>
-            <ul class="answers_list">
-                @foreach ($question->answers as $answer)
-                    <li>
-                        <label>
-                            <input type="checkbox" class="{{ 'answer_' . $answer->answer }} choice_btn_all">
-                            {{ $answer->choice }}</input>&ensp;{{ $answer->sentence }}
-                        </label>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
+    </div>
 
-        <button class="check_btn">Check!</button>
-        <p class="title">解説</p>
-        <div></div>
-        <div class="{{ 'page_' . $question->question_num }}  page_btn">
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
-                <button class="backQestion_btn">Back</button></a>
-            <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
-                <button class="nextQestion_btn">Next</button></a>
-        </div>
-    </main>
-
+    <button class="check_btn">Check!</button>
+    <h4 class="title">解説</h4>
+    <div class="{{ 'page_' . $question->question_num }}  page_btn">
+        <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
+            <button class="backQestion_btn">Back</button></a>
+        <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num + 1 }}">
+            <button class="nextQestion_btn">Next</button></a>
+    </div>
     <script>
         const ckeckButton = document.querySelector('.check_btn'); //-------正誤判定ボタン
         const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢
@@ -93,9 +56,4 @@
     </script>
 
 
-</body>
-<style>
-
-</style>
-
-</html>
+</x-app-layout>
