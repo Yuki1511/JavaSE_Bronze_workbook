@@ -18,7 +18,7 @@ a {
 
 /* ------ベースレイアウト----- */
 body {
-    font-size: large;
+    font-size: 22px;
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
@@ -54,8 +54,10 @@ ul {
     gap: 2.5rem;
 }
 
-.login_btn {
+.login {
     margin: 2rem 0;
+    padding: .5rem 1rem;
+    border: thick double var(--primary-color);
     font-size: larger;
     display: block;
     background-color: var(--accent-color);
@@ -71,6 +73,7 @@ main {
     list-style: none;
     display: flex;
     justify-self: center;
+    padding-bottom: 1rem;
 }
 
 .main_nav li {
@@ -83,11 +86,21 @@ main {
     justify-content: space-between;
 }
 
-.question-text,
+.question-text{
+    display: block;
+    background-color: var(--secondary-color);
+    padding: .5rem ;
+    margin: 1rem;
+    border-radius: 5px;
+}
+ .question-text p {
+    width: 800px;  
+ }
+ 
 .answers_list {
     display: block;
     background-color: var(--secondary-color);
-    padding: 0rem;
+    padding: .5rem ;
     margin: 1rem;
     border-radius: 5px;
 }
@@ -142,4 +155,11 @@ button {
     border-top: 2px solid var(--primary-color);
     border-right: 2px solid var(--primary-color);
     content: '';
+}
+
+/* -----register----- */
+.regi_body {
+    max-width: 900px;
+    margin: auto;
+
 }

@@ -29,9 +29,12 @@ Route::get('/', function () {
 Route::get('/question/index', [QuestionController::class, 'index']) -> Middleware('auth');
 // 個別表示ルート
 Route::get('/question/index/{question_id}', [QuestionController::class, 'show']);
-
+// 問題一覧
 Route::get('/question/questions_list', [QuestionController::class, 'questions_list']);
-
+// ログイン
+Route::get('/login', function(){
+    return view('login');
+});
 
 Route::get('/answer', [AnswerController::class, 'index']);
 

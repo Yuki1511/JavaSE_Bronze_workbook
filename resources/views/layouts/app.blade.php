@@ -18,10 +18,10 @@
         <div class="wrapper">
             <div class="site_top">
                 <h1>Java SE11 Bronze 資格対策</h1>
-                <div class="login_btn"><a href="#">ログイン</a></div>
+                <div class="login"><a href="{{ url('auth/login')}}">ログイン</a></div>
             </div>
             <ul class="main_nav ">
-                <li><a href="#">学習開始</a></li>
+                <li><a href="{{ url('question/index/1')}}">学習開始</a></li>
                 <li><a href="#">章選択</a></li>
                 <li><a href="#">試験概要</a></li>
             </ul>
