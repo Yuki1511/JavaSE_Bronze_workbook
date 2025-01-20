@@ -16,9 +16,9 @@ a {
     font-style: normal;
 }
 
-/* ------ベースレイアウト----- */
+/* ------ベースレイアウト(コンテンツ)----- */
 body {
-    font-size: 22px;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
@@ -35,6 +35,50 @@ body {
     margin: auto;
     padding: 0 1.5rem;
 }
+
+/* ------ベースレイアウト(ligin/register)----- */
+.header_guest {
+    height: 100px;
+}
+
+.header_guest h1 {
+    font-size: xx-large;
+    text-align: center;
+padding-top: 1.5rem;
+}
+
+
+.wrapper_guest {
+    max-width: 450px;
+        margin: auto;
+        padding: 0 1.5rem;
+}
+
+.guest_input {
+    width: 400px;
+}
+
+.guest_register_btn {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-top: .5rem;
+}
+
+.guest_btn{
+    border: thick double var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        border-radius: 5px;
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        font-size: 1em;
+        padding: .25em 1em;
+}
+
+
 /* -----ヘッダー----- */
 header {
     background-image: url("../images/back_paper.jpg");
@@ -157,9 +201,6 @@ button {
     content: '';
 }
 
-/* -----register----- */
-.regi_body {
-    max-width: 900px;
-    margin: auto;
-
+.test {
+    color: red;
 }
