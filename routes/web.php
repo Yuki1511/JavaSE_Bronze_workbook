@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
 use GuzzleHttp\Middleware;
@@ -32,9 +33,8 @@ Route::get('/question/index/{question_id}', [QuestionController::class, 'show'])
 // 問題一覧
 Route::get('/question/questions_list', [QuestionController::class, 'questions_list']);
 // ログイン
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/login', [AuthenticatedSessionController::class, 'create']);
+
 
 Route::get('/answer', [AnswerController::class, 'index']);
 
