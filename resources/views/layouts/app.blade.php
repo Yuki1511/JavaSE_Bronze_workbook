@@ -26,7 +26,7 @@
             <ul class="main_nav ">
                 <li><a href="{{ url('question/index/1') }}">学習開始</a></li>
                 <li><a href="{{ url('category/index') }}">章選択</a></li>
-                <li><a href="#">試験概要</a></li>
+                {{-- <li><a href="#">試験概要</a></li> --}}
             </ul>
         </div>
     </header>

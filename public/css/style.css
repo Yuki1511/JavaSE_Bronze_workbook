@@ -28,6 +28,7 @@ body {
 .title {
     font-size: x-large;
     font-weight: 100;
+    margin: 1rem 0;
 }
 
 .wrapper {
@@ -36,6 +37,25 @@ body {
     padding: 0 1.5rem;
 }
 
+.login:hover,
+.register:hover,
+.main_nav li:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: thick double var(--accent-color);
+    transition: .5s;
+}
+
+.login a:hover,
+.register a:hover,
+.main_nav li a:hover {
+    color: var(--accent-color);
+    transition: .5s;
+}
+
+.auth_group {
+    display: flex;
+}
 /* ------ベースレイアウト(ligin/register)----- */
 .header_guest {
     height: 100px;
@@ -103,7 +123,7 @@ ul {
 }
 
 .login, .register {
-    margin: 2rem 0;
+    margin: 2rem .5rem;
     padding: .5rem 1rem;
     border: thick double var(--primary-color);
     font-size: larger;
@@ -156,6 +176,25 @@ main {
 
 .answers_list li {
     padding: 1.25px;
+}
+
+/* -----カテゴリページ----- */
+.category_list {
+    background-color: var(--secondary-color);
+    padding: .5rem;
+}
+
+.category_list li {
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.category_list li a {
+    color: var(--accent-color);
+}
+
+.category_list li a:hover {
+    border-bottom: 1px solid var(--accent-color);
 }
 
 /* -----ボタン------ */
