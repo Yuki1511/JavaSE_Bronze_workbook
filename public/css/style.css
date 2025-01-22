@@ -65,6 +65,10 @@ align-items: flex-end;
 margin-top: .5rem;
 }
 
+.guest_register_btn a:hover {
+    border-bottom: 1px solid #544C40;
+}
+
 .guest_btn{
     border: thick double var(--primary-color);
         display: flex;
@@ -138,7 +142,8 @@ main {
     border-radius: 5px;
 }
  .question-text p {
-    width: 800px;  
+    max-width: 90%;
+    margin: 0 auto;
  }
  
 .answers_list {
@@ -167,6 +172,14 @@ button {
     padding: .5em 2em;
 }
 
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: thick double var(--accent-color);
+    transition: .5s;
+
+}
+
 .check_btn {
     margin: 2rem auto;
 }
@@ -189,6 +202,13 @@ button {
     border-top: 2px solid var(--primary-color);
     border-right: 2px solid var(--primary-color);
     content: '';
+}
+
+.nextQestion_btn:hover::after,
+.backQestion_btn:hover::before {
+    border-top: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+    transition: .5s;
 }
 
 .backQestion_btn::before {
