@@ -35,22 +35,24 @@
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
-        let correctCount = 0; //-------正答数カウント
-
+        // 正解をチェック->count++、不正解をチェック->count--
         ckeckButton.onclick = () => {
+            let correctCount = 0; //----------カウントリセット
 
             for (let i = 0; i < allChoices.length; i++) {
-                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ===
-                    'answer_1') {
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ==='answer_1') {
                     correctCount++;
+                } 
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] === 'answer_0') {
+                    correctCount--;
                 }
                 console.log(correctCount)
             }
 
             if (correctCount === correctAnswers.length) {
-                alert('正解！') //--------正解
+                alert('正解！')
             } else {
-                alert('不正解！！') //--------不正解
+                alert('不正解！！')
             }
         };
     </script>
