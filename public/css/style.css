@@ -98,7 +98,7 @@ ul {
     gap: 2.5rem;
 }
 
-.login {
+.login, .register {
     margin: 2rem 0;
     padding: .5rem 1rem;
     border: thick double var(--primary-color);
