@@ -7,6 +7,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -34,7 +35,8 @@ Route::get('/question/index/{question_id}', [QuestionController::class, 'show'])
 Route::get('/question/questions_list', [QuestionController::class, 'questions_list']);
 // ログイン
 Route::get('/login', [AuthenticatedSessionController::class, 'create']);
-
+//カテゴリ
+Route::get('/category/index',[CategoryController::class, 'show']);
 
 Route::get('/answer', [AnswerController::class, 'index']);
 

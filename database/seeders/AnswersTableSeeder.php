@@ -240,5 +240,124 @@ class AnswersTableSeeder extends Seeder
             'answer' => '0',
         ];
         DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '8',
+            'choice' => 'A',
+            'sentence' => '1つのソースファイルにpublicなインタフェースを複数記述できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '8',
+            'choice' => 'B',
+            'sentence' => 'ソースファイルの名前はpublicなクラス名と一致させなくてはいけない',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '8',
+            'choice' => 'C',
+            'sentence' => '1つのソースファイルには、1つのクラスだけを記述できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '8',
+            'choice' => 'D',
+            'sentence' => '1つのソースファイル内に、デフォルトのアクセス修飾子で修飾したインタフェースとpublicなクラスの両方を記述できる',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '8',
+            'choice' => 'E',
+            'sentence' => '1つのソースファイルにpublicなクラスを複数記述できる',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '9',
+            'choice' => 'A',
+            'sentence' => 'JVMが含まれる',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '9',
+            'choice' => 'B',
+            'sentence' => 'GUIアプリケーション開発に向いている',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '9',
+            'choice' => 'C',
+            'sentence' => '大規模システム向けの機能をセットにして提供している',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '9',
+            'choice' => 'D',
+            'sentence' => '仕様のみを提供している',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '10',
+            'choice' => 'A',
+            'sentence' => 'Java EEでは使用だけを定め、実装は各社が提供している',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '10',
+            'choice' => 'B',
+            'sentence' => 'Java SEの範囲は含まない',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '10',
+            'choice' => 'C',
+            'sentence' => 'エンタープライズ用途向けの多くの機能をセットにしたものである',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '10',
+            'choice' => 'D',
+            'sentence' => '携帯電話のような、リソースが制限されたデバイス向けの機能を提供している',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '11',
+            'choice' => 'A',
+            'sentence' => 'Java SEの機能の一部を抜き出して定義したエディションである',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '11',
+            'choice' => 'B',
+            'sentence' => '基本的なライブラリとJVMを組み合わせたものを「プロファイル」と呼ぶ',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '11',
+            'choice' => 'C',
+            'sentence' => '特定のデバイスに対応するAPIだけを抽出したものを「コンフィギュレーション」と呼ぶ',
+            'answer' => '0',
+        ];
+        DB::table('answers')->insert($param);
+        $param = [
+            'question_num' => '11',
+            'choice' => 'D',
+            'sentence' => 'Java MEでは、JVMではなく「KVM」と呼ばれる仮想マシンを使うことがある',
+            'answer' => '1',
+        ];
+        DB::table('answers')->insert($param);
     }
 }
