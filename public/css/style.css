@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* -----共通----- */
 :root {
     --primary-color: #EAE6E1;
@@ -18,16 +20,23 @@ a {
 
 /* ------ベースレイアウト(コンテンツ)----- */
 body {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
     color: var(--accent-color);
 }
 
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+
 .title {
-    font-size: x-large;
-    font-weight: 100;
+    font-size: xx-large;
+    border-bottom: double var(--accent-color);
+    font-weight: bold;
     margin: 1rem 0;
 }
 
@@ -37,25 +46,7 @@ body {
     padding: 0 1.5rem;
 }
 
-.login:hover,
-.register:hover,
-.main_nav li:hover {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    border: thick double var(--accent-color);
-    transition: .5s;
-}
 
-.login a:hover,
-.register a:hover,
-.main_nav li a:hover {
-    color: var(--accent-color);
-    transition: .5s;
-}
-
-.auth_group {
-    display: flex;
-}
 /* ------ベースレイアウト(ligin/register)----- */
 .header_guest {
     height: 100px;
@@ -64,14 +55,14 @@ body {
 .header_guest h1 {
     font-size: xx-large;
     text-align: center;
-padding-top: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 
 .wrapper_guest {
     max-width: 450px;
-        margin: auto;
-        padding: 0 1.5rem;
+    margin: auto;
+    padding: 0 1.5rem;
 }
 
 .guest_input {
@@ -79,122 +70,27 @@ padding-top: 1.5rem;
 }
 
 .guest_register_btn {
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: .5rem;
 }
 
 .guest_register_btn a:hover {
     border-bottom: 1px solid #544C40;
 }
 
-.guest_btn{
+.guest_btn {
     border: thick double var(--primary-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 120px;
-        border-radius: 5px;
-        background-color: var(--accent-color);
-        color: var(--primary-color);
-        font-size: 1em;
-        padding: .25em 1em;
-}
-
-
-/* -----ヘッダー----- */
-header {
-    background-image: url("../images/back_paper.jpg");
-    background-repeat: repeat-x;
-    width: 100%;
-}
-
-header li {
-    border: thick double var(--primary-color);
-    background-color: var(--accent-color);
-    border-radius: 5px;
-    padding: .5rem 2rem;
-}
-
-ul {
-    list-style-type: none;
-    gap: 2.5rem;
-}
-
-.login, .register {
-    margin: 2rem .5rem;
-    padding: .5rem 1rem;
-    border: thick double var(--primary-color);
-    font-size: larger;
-    display: block;
-    background-color: var(--accent-color);
-}
-/* -----メイン----- */
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 1.5rem 2rem 1.5rem;
-}
-
-.main_nav {
-    list-style: none;
     display: flex;
-    justify-self: center;
-    padding-bottom: 1rem;
-}
-
-.main_nav li {
-    margin: 0 1rem;
-    font-size: 32px;
-}
-
-.site_top {
-    display: flex;
-    justify-content: space-between;
-}
-
-.question-text{
-    display: block;
-    background-color: var(--secondary-color);
-    padding: .5rem ;
-    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
     border-radius: 5px;
-}
- .question-text p {
-    max-width: 90%;
-    margin: 0 auto;
- }
- 
-.answers_list {
-    display: block;
-    background-color: var(--secondary-color);
-    padding: .5rem ;
-    margin: 1rem;
-    border-radius: 5px;
-}
-
-.answers_list li {
-    padding: 1.25px;
-}
-
-/* -----カテゴリページ----- */
-.category_list {
-    background-color: var(--secondary-color);
-    padding: .5rem;
-}
-
-.category_list li {
-    margin: 1rem;
-    font-size: 20px;
-}
-
-.category_list li a {
-    color: var(--accent-color);
-}
-
-.category_list li a:hover {
-    border-bottom: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 1em;
+    padding: .25em 1em;
 }
 
 /* -----ボタン------ */
@@ -204,7 +100,7 @@ button {
     justify-content: center;
     align-items: center;
     width: 200px;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: var(--accent-color);
     color: var(--primary-color);
     font-size: 1em;
@@ -235,8 +131,8 @@ button:hover {
 
 .nextQestion_btn::after {
     transform: rotate(45deg);
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
     margin-left: 10px;
     border-top: 2px solid var(--primary-color);
     border-right: 2px solid var(--primary-color);
@@ -252,14 +148,139 @@ button:hover {
 
 .backQestion_btn::before {
     transform: rotate(225deg);
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
     margin-right: 10px;
     border-top: 2px solid var(--primary-color);
     border-right: 2px solid var(--primary-color);
     content: '';
 }
 
-.test {
-    color: red;
+/* -----ヘッダー----- */
+header {
+    background-image: url("../images/back_paper.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
 }
+
+header li {
+    border: thick double var(--primary-color);
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+}
+
+ul {
+    list-style-type: none;
+    gap: 2.5rem;
+}
+
+.login,
+.register {
+    margin: .5rem .5rem 2rem .5rem;
+    padding: .5rem 1rem;
+    border: thick double var(--primary-color);
+    border-radius: 15px;
+    font-size: large;
+    display: block;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.login:hover,
+.register:hover,
+.main_nav li:hover {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    border: thick double var(--accent-color);
+    transition: .5s;
+}
+
+.auth_group {
+    display: flex;
+}
+
+.main_nav {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.nav_start,
+.nav_select,
+.test_about {
+    margin: 0 2rem;
+    padding: .75rem 2rem;
+    border: thick double var(--primary-color);
+    border-radius: 15px;
+    font-size: 24px;
+    letter-spacing: .3rem;
+    display: block;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.nav_start:hover,
+.nav_select:hover,
+.test_about:hover {
+    border: thick double var(--accent-color);
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    transition: .5s;
+}
+
+.site_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -----ログイン・新規登録----- */
+
+
+/* -----メイン----- */
+.question-text {
+    display: block;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: 1rem 1.5rem ;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.question-text p {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.answers_list {
+    display: block;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.answers_list li {
+    padding: 1.25px;
+}
+
+/* -----カテゴリページ----- */
+.category_list {
+    background-color: var(--secondary-color);
+    padding: .5rem;
+}
+
+.category_list li {
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.category_list li a {
+    color: var(--accent-color);
+}
+
+.category_list li a:hover {
+    border-bottom: 1px solid var(--accent-color);
+}
+

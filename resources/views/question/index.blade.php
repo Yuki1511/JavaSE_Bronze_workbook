@@ -30,20 +30,34 @@
         const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢
         const correctAnswers = document.querySelectorAll('.answer_1') //-------正解の選択肢
         const wrongAnswers = document.querySelectorAll('.answer_0') //--------不正解の選択肢
-        // const rightEffect = document.querySelector('.maru') //-----------正解エフェクト 
+        //-----------正解エフェクト 
+                    function showConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: {
+                    y: 0.8
+                }
+            });
+        }
+
         // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
+
 
         // 正解をチェック->count++、不正解をチェック->count--
         ckeckButton.onclick = () => {
             let correctCount = 0; //----------カウントリセット
 
+
             for (let i = 0; i < allChoices.length; i++) {
-                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ==='answer_1') {
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ===
+                    'answer_1') {
                     correctCount++;
-                } 
-                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] === 'answer_0') {
+                }
+                if (allChoices[i].checked === true && allChoices[i].getAttribute('class').split(' ')[0] ===
+                    'answer_0') {
                     correctCount--;
                 }
                 console.log(correctCount)
@@ -51,6 +65,7 @@
 
             if (correctCount === correctAnswers.length) {
                 alert('正解！')
+                confetti();
             } else {
                 alert('不正解！！')
             }
