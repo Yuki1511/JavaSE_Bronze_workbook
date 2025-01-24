@@ -28,7 +28,7 @@ body {
 }
 
 main {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 0 1.5rem 2rem 1.5rem;
 }
@@ -41,7 +41,7 @@ main {
 }
 
 .wrapper {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 0 1.5rem;
 }
@@ -163,16 +163,8 @@ header {
     width: 100%;
 }
 
-header li {
-    border: thick double var(--primary-color);
-    background-color: var(--accent-color);
-    border-radius: 5px;
-    padding: .5rem 2rem;
-}
-
 ul {
     list-style-type: none;
-    gap: 2.5rem;
 }
 
 .login,
@@ -242,7 +234,7 @@ ul {
     display: block;
     background-color: var(--secondary-color);
     padding: 1rem;
-    margin: 1rem 1.5rem ;
+    margin: 1rem 1.5rem;
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -284,3 +276,48 @@ ul {
     border-bottom: 1px solid var(--accent-color);
 }
 
+/* -----モバイル----- */
+@media (max-width:800px) {
+    body {
+        font-size: 14px;
+        color: var(--accent-color);
+        margin: 0;
+    }
+
+    main {
+        max-width: 450px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .title {
+        font-size: large;
+        border-bottom: double var(--accent-color);
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+
+    .wrapper {
+        max-width: 500px;
+        margin: auto;
+        padding: 1rem .5rem;
+    }
+
+    header {
+        background-image: url("../images/back_paper.jpg");
+        background-repeat: repeat-x;
+        width: 100%;
+    }
+
+    .login,
+    .register {
+        margin: .5rem .5rem 2rem .5rem;
+        padding: .5rem 1rem;
+        border: thick double var(--primary-color);
+        border-radius: 15px;
+        font-size: small;
+        display: block;
+        color: var(--primary-color);
+        background-color: var(--accent-color);
+    }
+}
