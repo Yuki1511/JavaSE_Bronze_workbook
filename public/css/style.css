@@ -12,6 +12,10 @@ a {
     color: var(--primary-color);
 }
 
+ul {
+    list-style-type: none;
+}
+
 .font_ja {
     font-family: "Shippori Mincho", serif;
     font-weight: 600;
@@ -30,10 +34,10 @@ body {
 main {
     max-width: 950px;
     margin: auto;
-    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 .title {
+    /* width: 80%; */
     font-size: xx-large;
     border-bottom: double var(--accent-color);
     font-weight: bold;
@@ -43,7 +47,7 @@ main {
 .wrapper {
     max-width: 950px;
     margin: auto;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1rem 1.5rem;
 }
 
 
@@ -163,17 +167,17 @@ header {
     width: 100%;
 }
 
-ul {
-    list-style-type: none;
-}
+
 
 .login,
 .register {
-    margin: .5rem .5rem 2rem .5rem;
-    padding: .5rem 1rem;
+    width: 7rem;
+    margin: .5rem .5rem 1rem 0;
+    padding: .5rem;
     border: thick double var(--primary-color);
     border-radius: 15px;
     font-size: large;
+    text-align: center;
     display: block;
     color: var(--primary-color);
     background-color: var(--accent-color);
@@ -188,24 +192,22 @@ ul {
     transition: .5s;
 }
 
-.auth_group {
-    display: flex;
-}
-
+.auth_group,
 .main_nav {
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem;
 }
 
 .nav_start,
 .nav_select,
 .test_about {
+    margin: 15rem;
     margin: 0 2rem;
     padding: .75rem 2rem;
     border: thick double var(--primary-color);
     border-radius: 15px;
     font-size: 24px;
+    text-align: center;
     letter-spacing: .3rem;
     display: block;
     color: var(--primary-color);
@@ -230,7 +232,8 @@ ul {
 
 
 /* -----メイン----- */
-.question-text {
+.question-text,
+.answers_list {
     display: block;
     background-color: var(--secondary-color);
     padding: 1rem;
@@ -242,15 +245,6 @@ ul {
 .question-text p {
     max-width: 90%;
     margin: 0 auto;
-}
-
-.answers_list {
-    display: block;
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    margin: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .answers_list li {
@@ -307,10 +301,22 @@ ul {
         background-image: url("../images/back_paper.jpg");
         background-repeat: repeat-x;
         width: 100%;
+        text-align: center;
+    }
+
+    .site_top {
+        display: block;
+        text-align: center;
+    }
+
+    .site_top h1 {
+        font-size: xx-large;
+        padding-top: 1.5rem;
     }
 
     .login,
     .register {
+        width: 8rem;
         margin: .5rem .5rem 2rem .5rem;
         padding: .5rem 1rem;
         border: thick double var(--primary-color);
@@ -320,4 +326,20 @@ ul {
         color: var(--primary-color);
         background-color: var(--accent-color);
     }
+
+    .nav_start,
+    .nav_select,
+    .test_about {
+        width: 11rem;
+        margin: 0 .75rem;
+        padding: .75rem 1rem;
+        border: thick double var(--primary-color);
+        border-radius: 15px;
+        font-size: large;
+        letter-spacing: .5rem;
+        display: block;
+        color: var(--primary-color);
+        background-color: var(--accent-color);
+    }
+
 }
