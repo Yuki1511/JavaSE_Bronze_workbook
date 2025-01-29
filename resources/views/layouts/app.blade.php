@@ -35,6 +35,14 @@
     <main class="wrapper">
         {{ $slot }}
     </main>
+    <footer>
+        <div class="footer_nav">
+            <ul>
+                <li><a href="">お問い合わせ</a></li>
+                <li>テスト会社</li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 
