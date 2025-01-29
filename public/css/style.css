@@ -161,7 +161,8 @@ button:hover {
 }
 
 /* -----ヘッダー----- */
-header {
+header,
+footer {
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
     width: 100%;
@@ -228,8 +229,16 @@ header {
     justify-content: space-between;
 }
 
-/* -----ログイン・新規登録----- */
+/* -----フッター----- */
+.footer_nav {
+    width: 500px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    
+}
 
+/* -----ログイン・新規登録----- */
 
 /* -----メイン----- */
 .question-text,
