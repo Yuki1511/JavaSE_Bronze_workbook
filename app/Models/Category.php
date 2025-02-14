@@ -11,4 +11,8 @@ class Category extends Model
 
     protected $primaryKey = 'category_num';
 
+    public function questions()
+    {
+        return $this->hasMany(Question::class, 'category_num');
+    }
 }

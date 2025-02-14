@@ -1,6 +1,8 @@
 <x-app-layout>
     <div class="main-contents">
+        <h1>{{$question->category_num}}章</h1>
         <h4 class="title">問題</h4>
+        
         <div class="question-text">
             <p>{{ $question->question }}</p>
         </div>

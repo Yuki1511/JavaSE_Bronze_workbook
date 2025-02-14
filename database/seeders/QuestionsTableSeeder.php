@@ -13,7 +13,7 @@ class QuestionsTableSeeder extends Seeder
      */
     public function run(): void
     {
-// 1章-----------------------------------------------------
+        // 1章-----------------------------------------------------
         $param = [
             'question' => 'Javaに関する説明として、正しいものを選びなさい。（２つ選択）',
             'category_num' => '1',
@@ -80,7 +80,25 @@ class QuestionsTableSeeder extends Seeder
         ];
         DB::table('questions')->insert($param);
 
-// 2章--------------------------------------------------------------
-
+        // 2章-----------12問目から---------------------------------------------------
+        $param = [
+            'question' => 'プリミティブ型として正しいものを選びなさい。（２つ選択）',
+            'category_num' => '2',
+        ];
+        DB::table('questions')->insert($param);
+        $param = [
+            'question' => '参照型として正しいものを選びなさい。（３つ選択）',
+            'category_num' => '2',
+        ];
+        DB::table('questions')->insert($param);
+        $param = [
+            'question' => '整数値を代入できる型として正しいものを選びなさい。（３つ選択）',
+            'category_num' => '2',
+        ];
+        DB::table('questions')->insert($param);$param = [
+            'question' => '真偽値を保持できる型として正しいものを選びなさい。（１つ選択）',
+            'category_num' => '2',
+        ];
+        DB::table('questions')->insert($param);
     }
 }

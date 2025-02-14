@@ -52,71 +52,71 @@ class AnswersTable2Seeder extends Seeder
         $param = [
             'question_num' => '13',
             'choice' => 'A',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'String',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '13',
             'choice' => 'B',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'Date',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '13',
             'choice' => 'C',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'int',
+            'answer' => '0',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '13',
             'choice' => 'D',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'boolean',
+            'answer' => '0',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '13',
             'choice' => 'E',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'char[]',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '14',
             'choice' => 'A',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'double',
+            'answer' => '0',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '14',
             'choice' => 'B',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'char',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '14',
             'choice' => 'C',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'short',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '14',
             'choice' => 'D',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'int',
+            'answer' => '1',
         ];
         DB::table('answers')->insert($param);
         $param = [
             'question_num' => '14',
             'choice' => 'E',
-            'sentence' => '',
-            'answer' => '',
+            'sentence' => 'float',
+            'answer' => '0',
         ];
         DB::table('answers')->insert($param);
     }
