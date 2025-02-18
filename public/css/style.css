@@ -167,6 +167,7 @@ footer {
     background-repeat: repeat-x;
     background-size: cover;
     width: 100%;
+    min-height: 15vh;
 }
 
 
@@ -295,7 +296,7 @@ footer {
     }
 
     footer {
-        min-height: 18vh;
+        min-height: 20vh;
     }
 
     .title {
