@@ -165,7 +165,9 @@ header,
 footer {
     background-image: url("../images/back_paper.jpg");
     background-repeat: repeat-x;
+    background-size: cover;
     width: 100%;
+    min-height: 15vh;
 }
 
 
@@ -230,12 +232,12 @@ footer {
 }
 
 /* -----フッター----- */
-.footer_nav {
-    width: 500px;
-    margin: auto;
-    padding: 1rem;
+
+.copyright {
     text-align: center;
-    
+    padding: 2rem 0;
+    margin-top: 2rem;
+
 }
 
 /* -----ログイン・新規登録----- */
@@ -293,6 +295,10 @@ footer {
         padding: 0;
     }
 
+    footer {
+        min-height: 20vh;
+    }
+
     .title {
         font-size: large;
         border-bottom: double var(--accent-color);
@@ -304,13 +310,6 @@ footer {
         max-width: 500px;
         margin: auto;
         padding: 1rem .5rem;
-    }
-
-    header {
-        background-image: url("../images/back_paper.jpg");
-        background-repeat: repeat-x;
-        width: 100%;
-        text-align: center;
     }
 
     .site_top {

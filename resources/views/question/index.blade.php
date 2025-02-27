@@ -20,7 +20,8 @@
     </div>
 
     <button class="check_btn">Check!</button>
-    <h4 class="title">解説</h4>
+    {{-- <h4 class="title">解説</h4> --}}
+
     <div class="{{ 'page_' . $question->question_num }}  page_btn">
         <a href="http://127.0.0.1:8000/question/index/{{ $question->question_num - 1 }}">
             <button class="backQestion_btn">Back</button></a>
@@ -32,18 +33,6 @@
         const allChoices = document.querySelectorAll('.choice_btn_all'); //----------全選択肢
         const correctAnswers = document.querySelectorAll('.answer_1') //-------正解の選択肢
         const wrongAnswers = document.querySelectorAll('.answer_0') //--------不正解の選択肢
-        //-----------正解エフェクト 
-                    function showConfetti() {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: {
-                    y: 0.8
-                }
-            });
-        }
-
-        // const wrongEffect = document.querySelector('.batu') //-----------不正解エフェクト
 
         let checkboxes = document.querySelectorAll('input[type="checkbox"]') //-------input要素取得(CheckBox)
 
@@ -67,7 +56,6 @@
 
             if (correctCount === correctAnswers.length) {
                 alert('正解！')
-                confetti();
             } else {
                 alert('不正解！！')
             }

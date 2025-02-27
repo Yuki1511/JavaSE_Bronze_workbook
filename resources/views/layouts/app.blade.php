@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Shippori+Mincho&display=swap"
         rel="stylesheet">
-
-    <title>Quenstion</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/fieldset-legend@1/fieldset-legend.css">
+    <title>Question</title>
 </head>
 
 <body class="font_ja">
@@ -36,11 +36,8 @@
         {{ $slot }}
     </main>
     <footer>
-        <div class="footer_nav">
-            <ul>
-                <li><a href="">お問い合わせ</a></li>
-                <li>テスト会社</li>
-            </ul>
+        <div class="copyright">
+            <small>&copy; Java SE 勉強会</small>
         </div>
     </footer>
 </body>
